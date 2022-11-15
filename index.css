@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+.container {
+    border: 5px solid red;
+    min-height: 100vh;
+    background-image: url(./comdesk.avif);
+    background-size: contain;
+}
+
+.header {
+    border: 5px solid black;
+    min-height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.name {
+    margin-left: 210px;
+    font-size: 20px;
+}
+
+
+.nav {
+    margin-right: 210px;
+}
+
+.link {
+    display: flex;
+    list-style-type: none;
+}
+
+.link li {
+    margin-right: 30px;
+}
+
+.link li a {
+    text-decoration: none;
+    color: brown;
+    font-size: 20px;
+    text-shadow: 1px 2px 3px black;
+}
+
+.link li a:hover {
+    color: rgb(108, 28, 28);
+
+}
+
+.main-content {
+    border: 5px solid purple;
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.text {
+    /* border: 3px solid red; */
+    margin-left: 210px;
+    margin-right: 20px;
+    animation-name: nifemi;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    /* animation-iteration-count: infinite; */
+}
+
+@keyframes nifemi {
+    0% {
+        transform: translateY(850px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.text h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 2px brown;
+}
+
+.text  p {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.icon {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    font-size: 100px;
+}
+
+.image {
+    border: 3px solid black;
+    margin-right: 210px;
+}
+
+.me {
+    border-radius: 50% 20px;
+    width: 500px;
+    height: 500px;
+    animation-name: nife;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+}
+
+@keyframes nife {
+    0% {
+        transform: translateY(-850px);
+        z-index: 10;
+
+    }
+
+    100% {
+        transform: translateY(0);
+        z-index: 10;
+
+    }
+}
+
+.me:hover {
+    transform: translate(20px);
+}
+
+footer {
+    border: 5px solid black;
+    min-height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.font {
+    margin-left: 210px;
+    font-size: 35px;
+}
+
+.font i {
+    margin: 10px;
+} 
+
+.font i:hover {
+    transform: scale(60%);
+}
+
+.copy {
+    margin-right: 210px;
+} 
+
+
+
+
+
+
+/*CONTACT*/
+.left {
+    /* border: 3px solid red; */
+    margin-left: 210px;
+}
+
+.shape {
+    border: 3px solid brown;
+    box-shadow: 2px 3px 8px brown;
+    border-radius: 50% 20px;
+    margin-top: 40px;
+    padding: 50px;
+    height: 450px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.right {
+    /* border: 3px solid red; */
+    margin-right: 240px;
+    padding: 20px;
+    width: 35%;
+}
+
+.right h2 {
+    padding-bottom: 20px;
+}
+
+.in-put {
+    width: 100%;
+    box-shadow: 6px 6px 6px brown;
+    padding: 15px;
+    border-radius: 10px;
+    color: black;
+}
+
+textarea {
+    border-radius: 8px;
+    box-shadow: 6px 6px 6px brown;
+    padding: 10px;
+    color: black;
+    width: 100%
+}
+
+.send {
+    border: 1px solid brown;
+    border-radius: 10px;
+    box-shadow: none;
+    width: 60%;
+    background-color: brown;
+    margin-left: 85px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+}
+
+.send:hover {
+    background-color: rgb(44, 17, 17);
+}
+
+
+
+
+
+/*PROJECT*/
+.pro-content {
+    border: 3px solid blue;
+    padding: 20px;
+    margin-left: 210px;
+    margin-right: 240px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pro-content p {
+    margin-top: 6px;
+}
+
+.first {
+    border: 3px solid gold;
+}
+
+.second {
+    border: 3px solid green;
+}
+
+.third {
+    border: 3px solid rosybrown;
+}
+
+.fourth {
+    border: 3px solid lightgreen;
+}
+
+.first, .second, .third, .fourth {
+    width: 49%;
+    height: 500px;
+    background-color: black;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.bon {
+    background-color: rgb(99, 69, 30);
+    border: none;
+    padding: 20px;
+    width: 200px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    animation-name: bon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes bon {
+    0% {
+        transform: scale(100%);
+    }
+
+    50% {
+        transform: scale(90%);
+    }
+    
+    100% {
+        transform: scale(100%);
+    }
+}
+
+.bon:hover {
+    background-color: rgb(105, 69, 69);
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 780px) {
+    .name {
+        margin-left: 40px;
+        font-size: 19px;
+    }
+    
+    .nav {
+        border: 2px solid red;
+        margin-right: 40px;
+    }    
+  
+    .link li {
+        margin-right: 20px;
+    }
+    
+    .link li a {
+        font-size: 20px;
+    }
+    
+    .text {
+        margin-left: 40px;
+        margin-right: 80px;
+        animation: none;
+    }
+    
+    .text h1 {
+        font-size: 30px;
+    }
+    
+    .text  p {
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .image {
+        border: 3px solid black;
+        margin-right: 40px;
+    }
+    
+    .me {
+        width: 350px;
+        height: 350px;
+    }
+
+    .font {
+        margin-left: 40px;
+        font-size: 30px;
+    }
+    
+    .font i {
+        margin: 10px;
+    } 
+    
+    .font i:hover {
+        transform: scale(60%);
+    }
+    
+    .copy {
+        margin-right: 210px;
+    } 
+
+    .pro-content {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+
+    
+    .bon {
+        padding: 20px;
+        width: 100px;
+        margin: 10px 20px;
+    }
+
+    .left {
+        margin-left: 40px;
+    }
+
+    .right {
+        margin-right: 40px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    .name {
+        margin-left: 20px;
+        font-size: 15px;
+    }
+    
+    .nav {
+        border: 2px solid red;
+        margin-right: 20px;
+    }
+    
+    .link {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .link li {
+        margin-right: 30px;
+    }
+    
+    .link li a {
+        font-size: 10px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .text {
+        margin-left: 20px;
+        margin-right: 20px;
+        animation: none;
+        order: 2;
+    }
+    
+    .text h1 {
+        font-size: 30px;
+    }
+    
+    .text  p {
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    .skills {
+        margin-top: 20px;
+    }
+     
+    .image {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+    .me {
+        border-radius: 50% 20px;
+        width: 450px;
+        height: 450px;
+        animation: none;
+        order: 1;
+    }
+
+    .me:hover {
+        transform: none;
+    }
+    
+    footer {
+        border: 5px solid blue;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .font {
+        border: 3px solid red;
+        margin-left: 20px;
+        font-size: 35px;
+    }
+    
+    .font i {
+        margin: 10px;
+    } 
+    
+    .copy {
+        border: 3px solid red;
+        margin-right: 20px;
+    } 
+    
+    .left {
+        margin-left: 20px;
+    }
+    
+    .shape {
+        height: 450px;
+        width: 450px;
+        font-size: 25px;
+    }
+    
+    .right {
+        border: 3px solid rebeccapurple;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 20px;
+        width: 90%;
+    }
+    
+    /*PROJECT*/
+    .pro-content {
+        border: 3px solid blue;
+        padding: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .pro-content p {
+        font-size: 16px;
+    }
+    
+    .first {
+        border: 3px solid gold;
+    }
+    
+    .second {
+        border: 3px solid green;
+    }
+    
+    .third {
+        border: 3px solid rosybrown;
+    }
+    
+    .fourth {
+        border: 3px solid lightgreen;
+    }
+
+    .first, .second, .third, .fourth {
+        width: 100%;
+    }
+}
+
+
+
+
