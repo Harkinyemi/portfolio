@@ -6,7 +6,7 @@
 }
 
 .container {
-    border: 5px solid red;
+    /* border: 5px solid red; */
     min-height: 100vh;
     width: 100%;
     background-image: url(./comdesk.avif);
@@ -14,13 +14,15 @@
 }
 
 header {
-    border: 5px solid black;
+    border-bottom: 1px solid whitesmoke;
+    background-color: black;
     min-height: 20vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    position: fixed;
 }
 
 .name {
@@ -46,17 +48,17 @@ header {
 .link li a {
     text-decoration: none;
     color: brown;
-    font-size: 20px;
+    font-size: 25px;
     text-shadow: 1px 2px 3px black;
+    transition: 0.6;
 }
 
 .link li a:hover {
     color: rgb(108, 28, 28);
-
 }
 
 .main-content {
-    border: 5px solid purple;
+    /* border: 5px solid purple; */
     min-height: 70vh;
     width: 100%;
     display: flex;
@@ -80,7 +82,7 @@ header {
 
 @keyframes nifemi {
     0% {
-        transform: translateY(850px);
+        transform: translateY(113px);
     }
 
     100% {
@@ -88,9 +90,10 @@ header {
     }
 }
 
-.text h1 {
+.text #about {
     font-size: 50px;
     text-shadow: 2px 2px 2px brown;
+    margin-top: 150px;
 }
 
 .text  p {
@@ -102,11 +105,27 @@ header {
     margin-top: 20px;
 }
 
+.skills h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 2px brown;
+}
+
 .icon {
-    border: 3px solid red;
+    /* border: 3px solid  burlywood; */
+    border-radius: 50% 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-size: 100px;
+}
+
+.icon i {
+    box-shadow: 4px 5px 8px brown;
+    padding: 15px;
+    border-radius: 200% 100%;
+    color: rgb(188, 4, 4);
 }
 
 .image {
@@ -119,7 +138,7 @@ header {
 .me {
     border-radius: 10% 05%;
     width: 100%;
-    /* height: 400px; */
+    margin-top: 150px;
     animation-name: nife;
     animation-duration: 4s;
     animation-timing-function: ease;
@@ -146,6 +165,7 @@ header {
 
 footer {
     border: 5px solid black;
+    background-color: black;
     min-height: 20vh;
     display: flex;
     justify-content: space-between;
@@ -155,6 +175,7 @@ footer {
 .font {
     margin-left: 110px;
     font-size: 35px;
+    cursor: pointer;
 }
 
 .font i {
@@ -174,6 +195,14 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
 /*CONTACT*/
 .left {
     /* border: 3px solid red; */
@@ -185,7 +214,7 @@ footer {
     box-shadow: 2px 3px 8px brown;
     /* border-radius: 50% 20px; */
     margin-top: 200px;
-    padding: 50px;
+    padding: 60px;
     /* height: 450px; */
     width: 100%;
     display: flex;
@@ -198,6 +227,7 @@ footer {
 .right {
     /* border: 3px solid red; */
     margin-right: 140px;
+    margin-top: 150px;
     padding: 20px;
     width: 35%;
 }
@@ -243,47 +273,42 @@ textarea {
 
 
 
+
+
+
+
+
+
+
+
+
 /*PROJECT*/
 .pro-content {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     padding: 20px;
     margin-left: 110px;
     margin-right: 140px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 150px;
 }
 
 .pro-content p {
     margin-top: 6px;
-}
-
-.first {
-    border: 3px solid gold;
-}
-
-.second {
-    border: 3px solid green;
-}
-
-.third {
-    border: 3px solid rosybrown;
-}
-
-.fourth {
-    border: 3px solid lightgreen;
+    text-align: center;
 }
 
 .first, .second, .third, .fourth {
     width: 49%;
-    height: 500px;
     background-color: black;
     font-size: 20px;
     margin: 5px;
+    padding: 0 0 20px 0;
 }
 
 .bon {
-    background-color: rgb(99, 69, 30);
+    background-color: brown;
     border: none;
     padding: 20px;
     width: 200px;
@@ -293,6 +318,8 @@ textarea {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
+    font-size: 20px;
+    cursor: grab;
 }
 
 @keyframes bon {
@@ -310,7 +337,7 @@ textarea {
 }
 
 .bon:hover {
-    background-color: rgb(105, 69, 69);
+    background-color: rgb(108, 33, 33);
 }
 
 
@@ -320,6 +347,18 @@ textarea {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*TABLET VIEW*/
 @media screen and (max-width: 780px) {
     .name {
         margin-left: 40px;
@@ -407,6 +446,20 @@ textarea {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MOBILE VIEW*/
 @media screen and (max-width: 600px) {
     .name {
         margin-left: 20px;
@@ -433,6 +486,7 @@ textarea {
 
     .main-content {
         flex-direction: column;
+        animation: nifemi 2s;
     }
     
     .text {
@@ -441,7 +495,8 @@ textarea {
         order: 2;
     }
     
-    .text h1 {
+    .text #about {
+        margin-top: 0;
         font-size: 30px;
     }
     
@@ -456,6 +511,7 @@ textarea {
      
     .image {
         width: 100%;
+        border: none;
     }
     
     .me {
@@ -470,7 +526,6 @@ textarea {
     }
     
     footer {
-        border: 5px solid blue;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -478,7 +533,6 @@ textarea {
     }
     
     .font {
-        border: 3px solid red;
         margin-left: 20px;
         font-size: 35px;
     }
@@ -488,7 +542,6 @@ textarea {
     } 
     
     .copy {
-        border: 3px solid red;
         margin-right: 20px;
     } 
     
@@ -506,56 +559,46 @@ textarea {
     }
     
     .right {
-        border: 3px solid rebeccapurple;
+        /* border: 3px solid rebeccapurple; */
         margin-right: 20px;
         margin-left: 20px;
-        margin-top: 30px;
+        margin-top: 120px;
         padding: 20px;
         width: 90%;
         order: 1;
     }
+
+    .right h2 {
+        font-size: 30px;
+    }
     
     /*PROJECT*/
     .pro-content {
-        border: 3px solid blue;
+        /* border: 3px solid blue; */
         margin-left: 20px;
         margin-right: 20px;
         width: 90%;
         display: flex;
         flex-direction: column;
+        margin-top: 90px;
     }
 
     .pro-content p {
         font-size: 20px;
         text-align: center;
         margin-top: 10px;
+        padding: 10px;
     }
     
-    .first {
-        border: 3px solid gold;
-    }
-    
-    .second {
-        border: 3px solid green;
-    }
-    
-    .third {
-        border: 3px solid rosybrown;
-    }
-    
-    .fourth {
-        border: 3px solid lightgreen;
-    }
-
     .first, .second, .third, .fourth {
         width: 100%;
-        height: 90vh;
+        height: 95vh;
     }
 
     .bon {
-        padding: 20px;
+        padding: 16px;
         width: 50%;
-        margin: 10px 25px;
+        margin: 7px 25px;
     }
 
 
