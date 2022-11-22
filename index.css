@@ -50,11 +50,22 @@ header {
     color: brown;
     font-size: 25px;
     text-shadow: 1px 2px 3px black;
-    transition: 0.6;
+    transition: 1;
+    padding: 07px;
 }
 
 .link li a:hover {
-    color: rgb(108, 28, 28);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 4px 6px red;
+}
+
+.link li a:active {
+    color: gray;
+}
+
+.about-link, .project-link, .contact-link {
+    border-bottom: 1px solid white;
 }
 
 .main-content {
@@ -137,7 +148,7 @@ header {
 
 .me {
     border-radius: 10% 05%;
-    width: 100%;
+    width: 80%;
     margin-top: 150px;
     animation-name: nife;
     animation-duration: 4s;
@@ -214,19 +225,31 @@ footer {
     box-shadow: 2px 3px 8px brown;
     /* border-radius: 50% 20px; */
     margin-top: 200px;
-    padding: 60px;
+    padding: 50px;
     /* height: 450px; */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
+    font-size: 20px;
+}
+
+.shape a {
+    background-color: rgb(137, 46, 46);
+    border-radius: 5px;
+    padding: 7px;
+    text-decoration: none;
+}
+
+.shape a:hover {
+    box-shadow: 7px 8px 6px black;
 }
 
 .right {
     /* border: 3px solid red; */
     margin-right: 140px;
+    margin-left: 70px;
     margin-top: 150px;
     padding: 20px;
     width: 35%;
@@ -359,7 +382,7 @@ textarea {
 
 
 /*TABLET VIEW*/
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 900px) {
     .name {
         margin-left: 40px;
         font-size: 19px;
@@ -375,7 +398,7 @@ textarea {
     }
     
     .link li a {
-        font-size: 16px;
+        font-size: 20px;
     }
     
     .text {
@@ -477,11 +500,14 @@ textarea {
     }
     
     .link li {
+        /* border: 2px solid green; */
         margin-right: 30px;
+        padding: 10px;
     }
     
     .link li a {
         font-size: 16px;
+        text-align: center;
     }
 
     .main-content {
@@ -557,7 +583,8 @@ textarea {
         background-color: black;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-    
+
+
     .right {
         /* border: 3px solid rebeccapurple; */
         margin-right: 20px;
@@ -584,7 +611,7 @@ textarea {
     }
 
     .pro-content p {
-        font-size: 20px;
+        font-size: 16px;
         text-align: center;
         margin-top: 10px;
         padding: 10px;
@@ -596,9 +623,9 @@ textarea {
     }
 
     .bon {
-        padding: 16px;
-        width: 50%;
-        margin: 7px 25px;
+        padding: 10px;
+        width: 70%;
+        margin: 2px 25px;
     }
 
 

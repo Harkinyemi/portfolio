@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Akinyemi's Contact page</title>
 </head>
 <body>
    <div class="container">
@@ -19,7 +19,7 @@
             <ul class="link">
              <li><a href="index.html">ABOUT</a></li>
              <li><a href="project.html">PROJECT</a></li>
-             <li><a href="contact.html">CONTACT</a></li>
+             <li><a href="contact.html" class="contact-link">CONTACT</a></li>
             </ul>
         </div>
     </header>
@@ -27,12 +27,12 @@
             <div class="left">
                 <div class="shape">
                     <i class="fa fa-phone" aria-hidden="true"> 09071006868</i>
-                    <i class="fa fa-envelope-o" aria-hidden="true">  akinyeminifemi008@gmail.com</i>
+                    <a href="mailto:nifeakin0@gmail.com" onclick="alert('Send a mail to web developer.')"><i class="fa fa-envelope-o" aria-hidden="true">nifeakin0@gmail.com</i></a>
                 </div>
             </div>
             <div class="right">
                  <h2>GET IN TOUCH</h2>
-                <form action="">
+                <form action="" onsubmit="alert('This action can not be done yet')">
                     <label for="name"></label>
                     <input type="text" id="name" name="name" placeholder="Name" class="in-put"><br><br>
                     <label for="email"></label>
