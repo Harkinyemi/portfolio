@@ -14,7 +14,11 @@
             <div class="name">
              <h4>AKINYEMI OLUWANIFEMI</h4>
              <h4>WEB DEVELOPER</h4>
+            </div>      
+            <div class="read">
+                <i class="fa fa-bars bars" aria-hidden="true"></i>
             </div>
+
             <div class="nav">
                 <ul class="link">
                  <li><a href="index.html" class="about-link">ABOUT</a></li>
@@ -58,5 +62,19 @@
             </div>
         </footer>
    </div>
+   <script>
+    let toggBar = document.querySelector(".bars")
+    let navShow = document.querySelector(".nav")
+    let inks = document.querySelectorAll(".link li a")
+
+    function navToggle() {
+        toggBar.classList.toggle("fa-bars")
+        toggBar.classList.toggle("fa-times")
+        navShow.classList.toggle("show")
+    }
+
+    toggBar.addEventListener("click", navToggle)
+    inks.forEach(ink => ink.addEventListener("click", navToggle))
+   </script>
 </body>
 </html>

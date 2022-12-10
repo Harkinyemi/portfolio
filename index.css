@@ -31,14 +31,17 @@ header {
     width: 100%;
 }
 
-
 .nav {
     margin-right: 110px;
 }
 
+.read i{
+    display: none;
+}
+
 .link {
-    display: flex;
     list-style-type: none;
+    display: flex;
 }
 
 .link li {
@@ -52,16 +55,13 @@ header {
     text-shadow: 1px 2px 3px black;
     transition: 1;
     padding: 07px;
+    transition: all 1s;
 }
 
 .link li a:hover {
     color: white;
     border-radius: 5px;
     box-shadow: 3px 4px 6px red;
-}
-
-.link li a:active {
-    color: gray;
 }
 
 .about-link, .project-link, .contact-link {
@@ -93,7 +93,7 @@ header {
 
 @keyframes nifemi {
     0% {
-        transform: translateY(113px);
+        transform: translateY(100px);
     }
 
     100% {
@@ -104,7 +104,7 @@ header {
 .text #about {
     font-size: 50px;
     text-shadow: 2px 2px 2px brown;
-    margin-top: 150px;
+    margin-top: 250px;
 }
 
 .text  p {
@@ -148,7 +148,7 @@ header {
 
 .me {
     border-radius: 10% 05%;
-    width: 80%;
+    width: 90%;
     margin-top: 150px;
     animation-name: nife;
     animation-duration: 4s;
@@ -385,20 +385,21 @@ textarea {
 @media screen and (max-width: 900px) {
     .name {
         margin-left: 40px;
-        font-size: 19px;
+        font-size: 16px;
     }
     
     .nav {
         border: 2px solid red;
         margin-right: 40px;
     }    
-  
+
+   
     .link li {
         margin-right: 20px;
     }
     
     .link li a {
-        font-size: 20px;
+        font-size: 16px;
     }
     
     .text {
@@ -406,13 +407,20 @@ textarea {
         margin-right: 80px;
         animation: none;
     }
+
+    
+    .text #about {
+        font-size: 40px;
+        margin-top: 170px;
+    }
+
     
     .text h1 {
         font-size: 30px;
     }
     
     .text  p {
-        font-size: 20px;
+        font-size: 18px;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
     .image {
@@ -488,12 +496,36 @@ textarea {
         margin-left: 20px;
         font-size: 15px;
     }
-    
-    .nav {
-        border: 2px solid red;
-        margin-right: 20px;
+
+    .read i {
+        display: block;
+        font-size: 40px;
     }
-    
+  
+
+    .nav {
+        border: 2px solid ;
+        border-radius: 15px;
+        margin-right: 20px;
+        position: absolute;
+        right: 1000px;
+        top: 140px;
+        background-color: black;
+        transition: right 1s;
+        cursor: pointer;
+    }
+
+    .nav.show {
+        right: 0px;
+    }
+
+    .bars {
+        display: block;
+        margin-right: 30px;
+        font-size: 90px;
+        cursor: pointer;
+    }
+
     .link {
         display: flex;
         flex-direction: column;
@@ -503,11 +535,13 @@ textarea {
         /* border: 2px solid green; */
         margin-right: 30px;
         padding: 10px;
+
     }
     
     .link li a {
         font-size: 16px;
         text-align: center;
+        transition: all 1s;
     }
 
     .main-content {
@@ -516,7 +550,7 @@ textarea {
     }
     
     .text {
-        margin: 40px 20px;
+        margin: 40px 20zpx;
         animation: none;
         order: 2;
     }
@@ -534,15 +568,11 @@ textarea {
     .skills {
         margin-top: 20px;
     }
-     
-    .image {
-        width: 100%;
-        border: none;
-    }
     
     .me {
         border-radius: 10% 05%;
-        width: 100%;
+        width: 80%;
+        margin-left: 25px;
         animation: none;
         order: 1;
     }

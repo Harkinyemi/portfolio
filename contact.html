@@ -15,6 +15,9 @@
          <h4>AKINYEMI OLUWANIFEMI</h4>
          <h4>WEB DEVELOPER</h4>
         </div>
+        <div class="read">
+            <i class="fa fa-bars bars" aria-hidden="true"></i>
+        </div>
         <div class="nav">
             <ul class="link">
              <li><a href="index.html">ABOUT</a></li>
@@ -34,12 +37,12 @@
                  <h2>GET IN TOUCH</h2>
                 <form action="" onsubmit="alert('This action can not be done yet')">
                     <label for="name"></label>
-                    <input type="text" id="name" name="name" placeholder="Name" class="in-put"><br><br>
+                    <input type="text" id="name" name="name" placeholder="Name" class="in-put" required><br><br>
                     <label for="email"></label>
-                    <input type="email" id="email" name="email" placeholder="E-mail" class="in-put"><br><br>
+                    <input type="email" id="email" name="email" placeholder="E-mail" class="in-put" required><br><br>
                     <label for="phone-number"></label>
-                    <input type="tel" id="phone-number" name="phone-number" placeholder="Phone-number" class="in-put"><br><br>
-                    <textarea name="comment" id="comment" cols="" rows="10" placeholder="How can I help you?"></textarea>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Phone-number" class="in-put" required><br><br>
+                    <textarea name="comment" id="comment" cols="" rows="10" placeholder="How can I help you?" required></textarea>
                     <input type="submit" value="Send" class="send">
                 </form>
             </div>
@@ -57,5 +60,19 @@
             </div>
         </footer>
    </div>
+   <script>
+    let toggBar = document.querySelector(".bars")
+    let navShow = document.querySelector(".nav")
+    let inks = document.querySelectorAll(".link li a")
+
+    function navToggle() {
+        toggBar.classList.toggle("fa-bars")
+        toggBar.classList.toggle("fa-times")
+        navShow.classList.toggle("show")
+    }
+
+    toggBar.addEventListener("click", navToggle)
+    inks.forEach(ink => ink.addEventListener("click", navToggle))
+   </script>
 </body>
 </html>
